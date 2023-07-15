@@ -21,12 +21,16 @@ const Pagina1Screen: React.FC<Pagina1Props> = ({
         title="Ir al pagina 2"
         onPress={() => navigation.navigate('Pagina2Screen')}
       />
-      <TouchableOpacity onPress={()=>navigation.navigate('PersonaScreen',{
-        id:1,
-        nombre:'Pedro',
-      })}>
-        <Text> Ir a persona</Text>
-      </TouchableOpacity>
+      <View>
+        <TouchableOpacity
+          style={styles.botonGrande}
+          onPress={() => navigation.navigate('PersonaScreen', {
+          id: 1,
+          nombre: 'Pedro',
+        })}>
+          <Text style={styles.botonTexto}> Ir a persona</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
